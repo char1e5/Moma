@@ -770,7 +770,10 @@ body.nav-opened .nav {
     display: block;
     float: left;
     background: none !important; /* Makes sure there is never a background */
-    border: none !important; /* Makes sure there is never a border */
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .blog-logo img {
@@ -778,8 +781,8 @@ body.nav-opened .nav {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    height: 38px;
-    padding: 1px 0 5px 0;
+    height: 36px;
+    padding: 1px;
     width: auto;
 }
 
@@ -968,7 +971,7 @@ body:not(.post-template) .post-header {
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
     position: relative;
-    bottom: 15%;
+    bottom: 8rem;
 }
 
 body:not(.post-template) .post-title {
@@ -1663,10 +1666,6 @@ body:not(.post-template) .post-title {
         padding: 10% 0;
     }
 
-    .blog-logo img {
-        padding: 4px 0;
-    }
-
     .page-title {
         font-size: 4rem;
         letter-spacing: -1px;
@@ -1808,6 +1807,7 @@ body:not(.post-template) .post-title {
 
     .blog-logo {
         padding: 5px;
+        border: none;
     }
 
     .blog-logo img {
