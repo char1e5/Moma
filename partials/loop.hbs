@@ -6,9 +6,12 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 <article class="{{post_class}}">
-    <header class="post-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-    </header>
+    <a href="{{url}}">
+        <header class="post-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+            <div class="post-overlay"> </div>
+            <h2 class="post-title">{{{title}}}</h2>
+        </header>
+    </a>
     <section class="post-excerpt">
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
     </section>

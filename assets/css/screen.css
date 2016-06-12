@@ -244,6 +244,7 @@ h6 {
 a {
     color: #4A4A4A;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 a:hover {
@@ -504,7 +505,7 @@ body.nav-opened .site-wrapper {
     position: relative;
     display: table;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     margin-bottom: 5rem;
     text-align: center;
     background: #222 no-repeat center center;
@@ -905,6 +906,7 @@ body.nav-opened .nav {
     animation: fade-in-down 0.6s;
     -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+    text-shadow: 4px 4px 10px rgba(80, 80, 80, 0.8);
 }
 .home-template .page-description {
     -webkit-animation: fade-in-down 0.9s;
@@ -942,24 +944,35 @@ body.nav-opened .nav {
 }
 
 body:not(.post-template) .post-header {
-    height: 25vh;
+    height: 45vh;
     min-height: 180px;
     position: relative;
-    margin-bottom: 5rem;
+    padding: 0 5rem;
+    margin: 0 -8rem 8rem -8rem;
+    overflow: hidden;
     background: #222 no-repeat center center;
     background-size: cover;
-    overflow: hidden;
-    padding: 0 5rem;
+}
+
+.post-overlay {
+    margin: 0 -5rem;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+.post-overlay:hover {
+    background-color: transparent;
 }
 
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 3.5rem;
+    position: relative;
+    bottom: 15%;
 }
 
-body:not(.post-template) .post-title a {
+body:not(.post-template) .post-title {
+    font-weight: normal;
     color: #eee;
     text-shadow: 4px 4px 10px rgba(80, 80, 80, 0.8);
 }
@@ -1668,8 +1681,15 @@ body:not(.post-template) .post-title a {
         font-size: 0.95em
     }
 
+    body:not(.post-template) .post-header {
+        height: 30vh;
+        margin: 0 -5rem 3rem -5rem;
+    }
+
     body:not(.post-template) .post-title {
         font-size: 3.2rem;
+        bottom: 55%;
+        text-align: center;
     }
 
     hr {
@@ -1920,6 +1940,11 @@ body:not(.post-template) .post-title a {
 
     h6 {
         font-size: 1.8rem;
+    }
+
+    body:not(.post-template) .post-header {
+        height: 20vh;
+        margin: 0 -1.6rem 2rem -1.6rem;
     }
 
     body:not(.post-template) .post-title {
